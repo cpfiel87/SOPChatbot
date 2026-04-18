@@ -100,6 +100,11 @@ for _k, _v in _DEFAULTS.items():
     if _k not in st.session_state:
         st.session_state[_k] = _v
 
+# ── Persistent sidebar footer ─────────────────────────────────────────────────
+
+with st.sidebar:
+    st.caption("by [Juan Carlos Peñafiel Suárez](https://www.juancarlosps.com)")
+
 # ── Access code gate ───────────────────────────────────────────────────────────
 
 if not st.session_state.authenticated:
@@ -182,7 +187,6 @@ with st.sidebar:
     _mins_left = max(1, int((SESSION_LIMIT_SECONDS - _elapsed) / 60))
     st.caption(f"Session time remaining: ~{_mins_left} min")
     st.caption("Powered by **Claude** · sentence-transformers · FAISS")
-    st.caption("by [Juan Carlos Peñafiel Suárez](https://www.juancarlosps.com)")
 
 # ── Main area ──────────────────────────────────────────────────────────────────
 
