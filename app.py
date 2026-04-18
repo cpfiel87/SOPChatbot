@@ -182,6 +182,7 @@ with st.sidebar:
     _mins_left = max(1, int((SESSION_LIMIT_SECONDS - _elapsed) / 60))
     st.caption(f"Session time remaining: ~{_mins_left} min")
     st.caption("Powered by **Claude** · sentence-transformers · FAISS")
+    st.caption("by [Juan Carlos Peñafiel Suárez](https://www.juancarlosps.com)")
 
 # ── Main area ──────────────────────────────────────────────────────────────────
 
